@@ -1,0 +1,158 @@
+:root {
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --Very-dark-blue-1: hsl(217, 54%, 11%); /*(main BG)*/
+  --Very-dark-blue-2: hsl(216, 50%, 16%); /*(card BG)*/
+  --Very-dark-blue-3: hsl(215, 32%, 27%); /*(line)*/
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  background-color: var(--Very-dark-blue-1);
+}
+
+/* --- */
+main .card {
+  background-color: var(--Very-dark-blue-2);
+  display: grid;
+  grid-template-rows: 1.25fr 1fr;
+  padding: 1.5rem;
+  height: 40rem;
+  min-width: 275px;
+  width: 95vw;
+  max-width: 375px;
+  overflow: hidden;
+  position: absolute;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.121);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+main .card .image {
+  background-color: var(--Cyan);
+  position: relative;
+  background-image: url("../images/image-equilibrium.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+main .card .image:hover {
+  cursor: pointer;
+}
+
+main .card .image::after {
+  content: "";
+  background-color: var(--Cyan);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+main .card .image:hover::after {
+  opacity: 50%;
+}
+
+main .card .image img {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+main .card .image:hover img {
+  opacity: 100%;
+}
+
+main .card .txt h1 {
+  color: white;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  width: 62%;
+}
+
+main .card .txt p {
+  color: var(--Soft-blue);
+  font-weight: 300;
+}
+
+main .card .txt .details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+main .card .txt .details .price,
+main .card .txt .details .days {
+  display: flex;
+  align-items: center;
+}
+
+main .card .txt .details .price span,
+main .card .txt .details .days span {
+  margin-left: 0.5rem;
+}
+
+main .card .txt .details .price span {
+  color: #fff;
+}
+
+main .card .txt .details .days span {
+  color: var(--Soft-blue);
+}
+
+main .card .txt hr {
+  border: 0px;
+  border-top: 1px var(--Very-dark-blue-3) solid;
+  height: 0;
+  margin: 2rem 0;
+}
+
+main .card .creator {
+  display: flex;
+  align-items: center;
+}
+
+main .card .creator .avatar {
+  background-image: url("../images/image-avatar.png");
+  background-size: cover;
+  height: 35px;
+  width: 35px;
+  border: 2px #fff solid;
+  border-radius: 50%;
+  -webkit-border-radius: 10px #fff solid;
+  -moz-border-radius: 10px #fff solid;
+  -ms-border-radius: 10px #fff solid;
+  -o-border-radius: 10px #fff solid;
+  margin-right: 1rem;
+}
+
+main .card .creator span {
+  color: #fff;
+  cursor: pointer;
+}
